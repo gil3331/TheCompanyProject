@@ -57,8 +57,8 @@ public class SpringWebConfiguration implements WebMvcConfigurer {
 	@Bean
 	public InternalResourceViewResolver InternalResourceViewResolver() {
 		InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-		internalResourceViewResolver.setPrefix("/WEB-INF/jsp/");
-		internalResourceViewResolver.setSuffix(".jsp");
+		internalResourceViewResolver.setPrefix("/WEB-INF/jsp/");//web-inf의 jsp폴더에 있는 파일을
+		internalResourceViewResolver.setSuffix(".jsp");//.jsp로 불러준다.
 		return internalResourceViewResolver;
 	}
 }

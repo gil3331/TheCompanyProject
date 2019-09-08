@@ -2,14 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="192.168.23.115" key="selection"/>
+		<item value="mysql" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="192.168.23.115"/>
 			<item value="mysql"/>
+			<item value="tomcat"/>
+			<item value="192.168.23.115"/>
 			<item value="ignite.version"/>
 			<item value="ignite.versio"/>
 			<item value="junit"/>

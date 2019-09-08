@@ -11,7 +11,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 public class MyWebApplicationInitializer implements WebApplicationInitializer {
 
-	@Override
+	@Override//다른곳으로 부터 상속 받음
 	public void onStartup(ServletContext servletCxt) {
 
 		// Create the 'root' Spring application context
@@ -31,9 +31,9 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer {
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("/");
 
-		CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-		characterEncodingFilter.setEncoding("UTF-8");
-		characterEncodingFilter.setForceEncoding(true);
+		CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();//말그대로 글자타입 정해주는 부분
+		characterEncodingFilter.setEncoding("UTF-8");//utf-8로 지정한다.
+		characterEncodingFilter.setForceEncoding(true);//강제 인코딩을 허용함
 		servletCxt.addFilter("characterEncodingFilter", characterEncodingFilter).addMappingForUrlPatterns(null, false,
 				"/*");
 	}

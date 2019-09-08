@@ -1,0 +1,9 @@
+package kr.co.uclick.repository;
+
+
+
+public interface CustomUserRepository {
+
+	public void doSample(String name);
+				
+}

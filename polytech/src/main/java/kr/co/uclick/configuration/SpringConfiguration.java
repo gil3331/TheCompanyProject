@@ -26,22 +26,22 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@Configuration
-@ImportResource(locations = "classpath:applicationContext-ignite.xml")
-@ComponentScan({ "kr.co.uclick.service" })
-@EnableTransactionManagement(mode = AdviceMode.ASPECTJ)
+@Configuration//클래스에 이 어노테이션이 붙어 있으면 스프링은 해당 클래스를 Java config로 간주한다.
+@ImportResource(locations = "classpath:applicationContext-ignite.xml")//ignite에 있는 내용을 import해온다.
+@ComponentScan({ "kr.co.uclick.service" })//컴포넌트 검색기능을 가진 어노테이션이다
+@EnableTransactionManagement(mode = AdviceMode.ASPECTJ)//트랜잭션 메니저로 aspectj를 사용
 @EnableSpringConfigured
-@EnableJpaRepositories(basePackages = "kr.co.uclick.repository")
+@EnableJpaRepositories(basePackages = "kr.co.uclick.repository")//jpa레퍼지토리로 해당 패키지를 씀
 public class SpringConfiguration {
 
 	@Bean
 	@Primary
 	public DataSource dataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
-		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://192.168.23.115:3306/polytech?serverTimezone=UTC");
-		dataSource.setUsername("root");
-		dataSource.setPassword("asdf1234");
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");//jdbc 드라이버를 써서 datasource driver를 사용
+		dataSource.setUrl("jdbc:mysql://35.189.155.41:3306/kopo15?characterEncoding=utf8&serverTimezone=UTC");//서버 url부여
+		dataSource.setUsername("root");//서버 접속시 아이디
+		dataSource.setPassword("asdf1234");//서버 접속시 패스워드
 		return dataSource;
 	}
 
