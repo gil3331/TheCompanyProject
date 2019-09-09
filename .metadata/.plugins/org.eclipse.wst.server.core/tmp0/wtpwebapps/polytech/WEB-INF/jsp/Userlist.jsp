@@ -9,11 +9,13 @@
 <body>
 <f:view>
 <h1 align=center>사용자 리스트</h1>
+
 <table cellspacing=1 width=600 border=1 align=center>
 	<tr>
 		<td width=50><p align=center>ID</p></td>
 		<td width=50><p align=center>이름</p></td>
-		<td width=50><p align=center>전화번호</p></td>		
+		<td width=50><p align=center>전화번호</p></td>
+		<td width=50><p align=center>수정/삭제</p></td>			
 	</tr>
 	<c:choose>
 		<c:when test="${empty users}">
@@ -24,18 +26,22 @@
 			</tr>
 			</c:when>
 			<c:otherwise>
+				<form>
 				<c:forEach items="${users}" var="e">
 				<tr>
-           	 		<td width=50><p align=center>${e.id}</p></td>
+					<td width=50><p align=center>${e.id}</p></td>
            			<td width=50><p align=center>${e.name}</p></td>
            			<td width=50><p align=center>${e.number}</p></td>
+           			<td width=50><p align=center><input type=button value=수정 onclick="location.href='Userupdate.html?id=${e.id}'"><input type=button value=삭제 onclick="location.href='Userdelete.html?id=${e.id}'"></p></td>
            		</tr>
            		</c:forEach>
+           		</form>
           </c:otherwise>
          </c:choose>
     </table>
-    <form action=newUser align=center>
-    <input type=button value="사용자 추가">
+    
+    <form action=newUser.html>
+    <input type=submit value="사용자 추가">
     </form>
 </body>
 </f:view>

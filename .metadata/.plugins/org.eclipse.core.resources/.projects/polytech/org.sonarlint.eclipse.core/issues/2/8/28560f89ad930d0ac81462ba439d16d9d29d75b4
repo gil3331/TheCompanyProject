@@ -1,17 +1,30 @@
 
-„squid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(ÍÓ†Øøÿÿÿÿ8¿´Ý†Ñ-H®RMAJORZ
+ƒsquid:S00100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïàò—8×½×›Ñ-H˜RMINORZ
 CODE_SMELL
-csquid:S1068"*Remove this unused "logger" private field.(—­Š›ùÿÿÿÿ8œ–¯Ñ-H±RMAJORZ
+squid:UselessImportCheck"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”šô8¤Õá°Ñ-HâRMINORZ
 CODE_SMELL
-„squid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(¹îÙýÿÿÿÿ8¿´Ý†Ñ-H¯RMAJORZ
+—squid:UselessImportCheck"QRemove this unused import 'org.springframework.web.bind.annotation.PathVariable'.(¹ûñÅþÿÿÿÿ8•­Ô®Ñ-HRMINORZ
 CODE_SMELL
-„squid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8¿´Ý†Ñ-H°RMAJORZ
+˜squid:UselessImportCheck"RRemove this unused import 'org.springframework.web.bind.annotation.RequestMethod'.(Ê™Ðÿûÿÿÿÿ8•­Ô®Ñ-H™RMINORZ
 CODE_SMELL
-squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦žšÀøÿÿÿÿH²RMINORZ
+squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦žšÀøÿÿÿÿHšRMINORZ
 CODE_SMELL
-squid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(²Ã²Ñ8¿´Ý†Ñ-H³RMAJORZ
+˜squid:UselessImportCheck"RRemove this unused import 'org.springframework.web.bind.annotation.DeleteMapping'.(­ìÎªþÿÿÿÿ8øŠö°Ñ-HðRMINORZ
 CODE_SMELL
-„squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ù”¶îÿÿÿÿÿ8êÄ¶‡Ñ-HºRMAJORZ
+zsquid:S4684*"@Replace this persistent entity with a simple POJO or DTO object.(Ïàò—8”¶—Ñ-H–RCRITICALZVULNERABILITY
+squid:S46847"@Replace this persistent entity with a simple POJO or DTO object.(ÊõÓæûÿÿÿÿ8¶ˆ±Ñ-HšRCRITICALZVULNERABILITY
+”squid:UselessImportCheck"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé8 è›œÑ-H›RMINORZ
 CODE_SMELL
-„squid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8êÄ¶‡Ñ-H»RMAJORZ
+{squid:UselessImportCheck":Remove this unused import 'javax.lang.model.element.Name'.(°¦£Â8”¶—Ñ-HœRMINORZ
+CODE_SMELL
+csquid:S1068"*Remove this unused "logger" private field.(—­Š›ùÿÿÿÿ8œ–¯Ñ-HžRMAJORZ
+CODE_SMELL
+l
+squid:S1068"9Replace this use of System.out or System.err by a logger.(—ÊÇ½8µ’÷±Ñ-HÈRMAJORZ
+CODE_SMELL
+q
+squid:S1069"9Replace this use of System.out or System.err by a logger.(„£õòùÿÿÿÿ8µ’÷±Ñ-HÉRMAJORZ
+CODE_SMELL
+l
+squid:S106:"9Replace this use of System.out or System.err by a logger.(Æ©öÂ8µ’÷±Ñ-HÊRMAJORZ
 CODE_SMELL

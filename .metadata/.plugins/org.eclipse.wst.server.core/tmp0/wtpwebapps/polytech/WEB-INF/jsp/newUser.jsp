@@ -9,15 +9,16 @@
 <body>
 <f:view>
 <h1 align=center>신규 사용자 작성</h1>
+<form action=Userinsert.html>
 <table cellspacing=1 width=600 border=1 align=center>
 	<tr>
-		<td width=50>ID<input type=number name=ID></td><tr>
+		<td width=50>ID<input type=text name=ID placeholder="자동부여"></td><tr>
 		<td width=50>이름<input type=text name=name></td><tr>
 		<td width=50>전화번호<input type=text name=number></td><tr>
 	</tr>
-    
     </table>
-    
+    <input type=submit value=저장>
+</form>
 </body>
 </f:view>
 </body>

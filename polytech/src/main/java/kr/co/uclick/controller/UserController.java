@@ -1,13 +1,20 @@
 package kr.co.uclick.controller;
 
+import javax.lang.model.element.Name;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.co.uclick.entity.User;
 import kr.co.uclick.service.UserService;
@@ -26,25 +33,37 @@ public class UserController {
 		return "Userlist";//list값을 돌려준다.
 	}
 	
-	//@GetMapping(value = "newUser.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
-	//public String newUser(Model model) {
-	//	return "newUser";//newForm을 돌려준다.
-	//}
+	@GetMapping(value = "newUser.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
+	public String newUser(Model model) {
+			return "newUser";//newForm을 돌려준다.
+	}
+	
+	@GetMapping(value = "Userinsert.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
+	public String Userinsert(User user,Model model) {
+			userService.save(user);
+			return "Userinsert";//newForm을 돌려준다.
+	}
 
-	//@GetMapping(value = "editForm.html")//editForm.html을 호출하면 (데이터 값 update 페이지)
-	//public String editForm(Long sampleId, Model model) {
-	//	userService.findById(sampleId);//sampleservice에서 sampleId라는 id를 찾아준다.
-	//	return "editForm";//editForm을 돌려준다.
-	//}
+	
+	@GetMapping(value = "Userupdate.html")//save.html을 호출하면 (데이터 insert 페이지)
+	public String save(Long id, Model model) {
+		model.addAttribute("user",userService.findUsersById(id));
+		return "Userupdate";
+	}
+	
+	@PostMapping(value = "UserupdateDB.html")//save.html을 호출하면 (데이터 insert 페이지)
+	public String saveDB(User user, Model model) {
+		System.out.println(user.getId());
+		System.out.println(user.getName());
+		System.out.println(user.getNumber());
+		userService.save(user);
+		return "UserupdateDB";
+	}
 
-	//@PostMapping(value = "save.html")//save.html을 호출하면 (데이터 insert 페이지)
-	//public String save(User sample, Model model) {
-	//	return "redirect:list.html";
-	//}
-
-	//@DeleteMapping(value = "delete.html")//delete.html을 호출하면 (데이터 delete 페이지)
-	//public String delete(Long sampleId, Model model) {
-	//	return "redirect:list.html";
-	//}
+	@GetMapping(value = "Userdelete.html")//delete.html을 호출하면 (데이터 delete 페이지)
+	public String delete(Long id, Model model) {
+		userService.delete(id);
+		return "redirect:Userlist.html";
+	}
 		
 }

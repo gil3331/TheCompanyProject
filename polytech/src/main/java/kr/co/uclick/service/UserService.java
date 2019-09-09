@@ -1,6 +1,9 @@
 package kr.co.uclick.service;
 
 import java.util.List;
+import java.util.Optional;
+
+import javax.lang.model.element.Name;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +20,8 @@ public class UserService {
 	@Autowired
 	private UserRepository UserRepository;//이 페이지에서 sampleRepository를 자동 연결해준다.
 
-	public void delete(User entity) {//이후 데이터 delete를 위해서 delete기능을 가진 페이지를 호출하면, 사용되는 영역
-		UserRepository.delete(entity);
+	public void delete(Long id) {//이후 데이터 delete를 위해서 delete기능을 가진 페이지를 호출하면, 사용되는 영역
+		UserRepository.deleteById(id);
 	}
 
 	@Transactional(readOnly = true)//트랜잭션 제어를 통해 읽기기능만을 부여함.
@@ -35,12 +38,14 @@ public class UserService {
 		return UserRepository.findUserByName(name);//samplerepository에서 name이란 값을 가진 이름을 찾아 리턴해준다.
 	}
 
-	public void save(User sample) {//아마도 데이터 insert 영역(?)
-		UserRepository.save(sample);
+	public void save(User user) {//아마도 데이터 insert 영역(?)
+		UserRepository.save(user);
 	}
-
-	public void findById(Long sampleId) {//id값을 기준으로 조회하는 영역
-		UserRepository.findById(sampleId);
+				
+	@Transactional(readOnly=true)
+	public List<User> findUsersById(Long id) {//id값을 기준으로 조회하는 영역
+		
+		return UserRepository.findUsersById(id);
 	}
 
 }
