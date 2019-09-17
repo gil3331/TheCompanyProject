@@ -14,7 +14,8 @@
 	<tr>
 		<td width=50><p align=center>ID</p></td>
 		<td width=50><p align=center>이름</p></td>
-		<td width=50><p align=center>전화번호</p></td>
+		<td width=50><p align=center>부서</p></td>
+		<td width=50><p align=center>등록일</p></td>
 					
 	</tr>
 	<c:choose>
@@ -30,8 +31,8 @@
 				<tr>
            	 		<td width=50><p align=center><input type=text name=id value="${e.id}" ></p></td>
            			<td width=50><p align=center><input type=text name=name value="${e.name}"></p></td>
-           			<td width=50><p align=center><input type=text name=number value="${e.number}"></p></td>
-        
+           			<td width=50><p align=center><input type=text name=department value="${e.department}"></p></td>
+        			<td width=50><p align=center><input type=text name=registDAte value="${e.registDate}"></p></td>
            		</tr>
            		</c:forEach>
           </c:otherwise>

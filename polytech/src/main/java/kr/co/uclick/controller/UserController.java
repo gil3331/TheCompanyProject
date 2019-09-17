@@ -1,20 +1,12 @@
 package kr.co.uclick.controller;
 
-import javax.lang.model.element.Name;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.co.uclick.entity.User;
 import kr.co.uclick.service.UserService;
@@ -55,7 +47,8 @@ public class UserController {
 	public String saveDB(User user, Model model) {
 		System.out.println(user.getId());
 		System.out.println(user.getName());
-		System.out.println(user.getNumber());
+		System.out.println(user.getdepartment());
+		System.out.println(user.getregistDate());
 		userService.save(user);
 		return "UserupdateDB";
 	}

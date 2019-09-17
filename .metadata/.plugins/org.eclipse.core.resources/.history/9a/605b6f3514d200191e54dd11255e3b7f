@@ -1,9 +1,0 @@
-package kr.co.uclick.repository;
-
-import org.hibernate.mapping.List;
-
-public interface CustomSampleRepository {
-
-	public void doSample(String name);
-				
-}

@@ -1,8 +1,0 @@
-
-squid:UselessImportCheck"JRemove this unused import 'org.springframework.data.jpa.repository.Query'.(ΔΊφοώÿÿÿÿ8ƒƒε­Ρ-H§RMINORZ
-CODE_SMELL
-{squid:UselessImportCheck":Remove this unused import 'javax.lang.model.element.Name'.(°¦£Β8¥ΎώΡ-H¨RMINORZ
-CODE_SMELL
-squid:UselessImportCheck
-"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”τ8ƒƒε­Ρ-H©RMINORZ
-CODE_SMELL

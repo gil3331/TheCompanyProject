@@ -7,6 +7,13 @@
 <title>신규 사용자 작성</title>
 </head>
 <body>
+<script language="javascript">
+function getDate(){
+    var today = new Date();
+
+document.getElementById("currentDate").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+}
+</script>
 <f:view>
 <h1 align=center>신규 사용자 작성</h1>
 <form action=Userinsert.html>
@@ -14,12 +21,15 @@
 	<tr>
 		<td width=50>ID<input type=text name=ID placeholder="자동부여"></td><tr>
 		<td width=50>이름<input type=text name=name></td><tr>
-		<td width=50>전화번호<input type=text name=number></td><tr>
+		<td width=50>부서<input type=text name=department></td><tr>
+		<td width=50>등록일<input type=date onload="getDate()" id="currentDate" name=registDate></td><tr>
 	</tr>
     </table>
     <input type=submit value=저장>
 </form>
+
 </body>
+
 </f:view>
 </body>
 </html>

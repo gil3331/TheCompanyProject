@@ -8,13 +8,19 @@
 </head>
 <body>
 <f:view>
+<button type="button" name=사용자리스트 onclick="location.href='Userlist.html'">사용자 리스트</button><button type="button" name=전화번호리스트 onclick="location.href='Phonelist.html'">전화번호 리스트</button>
 <h1 align=center>사용자 리스트</h1>
 
+
+<form action=newUser.html style="text-align:center">
+<input type=submit value="사용자 추가">
+</form>
 <table cellspacing=1 width=600 border=1 align=center>
 	<tr>
 		<td width=50><p align=center>ID</p></td>
 		<td width=50><p align=center>이름</p></td>
-		<td width=50><p align=center>전화번호</p></td>
+		<td width=50><p align=center>부서</p></td>
+		<td width=50><p align=center>등록일</p></td>
 		<td width=50><p align=center>수정/삭제</p></td>			
 	</tr>
 	<c:choose>
@@ -29,9 +35,10 @@
 				<form>
 				<c:forEach items="${users}" var="e">
 				<tr>
-					<td width=50><p align=center>${e.id}</p></td>
+					<td width=50><p align=center><a href="newPhone.html?user.id=${e.id}">${e.id}</a></p></td>
            			<td width=50><p align=center>${e.name}</p></td>
-           			<td width=50><p align=center>${e.number}</p></td>
+           			<td width=50><p align=center>${e.department}</p></td>
+           			<td width=50><p align=center>${e.registDate}</p></td>
            			<td width=50><p align=center><input type=button value=수정 onclick="location.href='Userupdate.html?id=${e.id}'"><input type=button value=삭제 onclick="location.href='Userdelete.html?id=${e.id}'"></p></td>
            		</tr>
            		</c:forEach>
@@ -40,9 +47,7 @@
          </c:choose>
     </table>
     
-    <form action=newUser.html>
-    <input type=submit value="사용자 추가">
-    </form>
+    
 </body>
 </f:view>
 </body>

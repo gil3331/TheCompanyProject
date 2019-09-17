@@ -1,30 +1,21 @@
 
-ƒsquid:S00100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïàò—8×½×›Ñ-H˜RMINORZ
+ƒsquid:S00100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïàò—8×½×›Ñ-HÇ$RMINORZ
 CODE_SMELL
-squid:UselessImportCheck"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”šô8¤Õá°Ñ-HâRMINORZ
-CODE_SMELL
-—squid:UselessImportCheck"QRemove this unused import 'org.springframework.web.bind.annotation.PathVariable'.(¹ûñÅşÿÿÿÿ8•­Ô®Ñ-HRMINORZ
-CODE_SMELL
-˜squid:UselessImportCheck"RRemove this unused import 'org.springframework.web.bind.annotation.RequestMethod'.(Ê™Ğÿûÿÿÿÿ8•­Ô®Ñ-H™RMINORZ
-CODE_SMELL
-squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦šÀøÿÿÿÿHšRMINORZ
-CODE_SMELL
-˜squid:UselessImportCheck"RRemove this unused import 'org.springframework.web.bind.annotation.DeleteMapping'.(­ìÎªşÿÿÿÿ8øŠö°Ñ-HğRMINORZ
-CODE_SMELL
-zsquid:S4684*"@Replace this persistent entity with a simple POJO or DTO object.(Ïàò—8”¶—Ñ-H–RCRITICALZVULNERABILITY
-squid:S46847"@Replace this persistent entity with a simple POJO or DTO object.(ÊõÓæûÿÿÿÿ8¶ˆ±Ñ-HšRCRITICALZVULNERABILITY
-”squid:UselessImportCheck"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé8 è›œÑ-H›RMINORZ
-CODE_SMELL
-{squid:UselessImportCheck":Remove this unused import 'javax.lang.model.element.Name'.(°¦£Â8”¶—Ñ-HœRMINORZ
-CODE_SMELL
-csquid:S1068"*Remove this unused "logger" private field.(—­Š›ùÿÿÿÿ8œ–¯Ñ-HRMAJORZ
-CODE_SMELL
+squid:S4684/"@Replace this persistent entity with a simple POJO or DTO object.(ÊõÓæûÿÿÿÿ8”¶—Ñ-HË$RCRITICALZVULNERABILITY
 l
-squid:S1068"9Replace this use of System.out or System.err by a logger.(—ÊÇ½8µ’÷±Ñ-HÈRMAJORZ
+squid:S1060"9Replace this use of System.out or System.err by a logger.(—ÊÇ½8µ’÷±Ñ-HÊ$RMAJORZ
+CODE_SMELL
+squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦šÀøÿÿÿÿHÎ$RMINORZ
 CODE_SMELL
 q
-squid:S1069"9Replace this use of System.out or System.err by a logger.(„£õòùÿÿÿÿ8µ’÷±Ñ-HÉRMAJORZ
+squid:S1061"9Replace this use of System.out or System.err by a logger.(„£õòùÿÿÿÿ8µ’÷±Ñ-HÉ$RMAJORZ
+CODE_SMELL
+q
+squid:S1062"9Replace this use of System.out or System.err by a logger.(Ï°‡Øùÿÿÿÿ8µ’÷±Ñ-HÌ$RMAJORZ
+CODE_SMELL
+zsquid:S4684""@Replace this persistent entity with a simple POJO or DTO object.(Ïàò—8Ê«úöÑ-HÍ$RCRITICALZVULNERABILITY
+csquid:S1068"*Remove this unused "logger" private field.(—­Š›ùÿÿÿÿ8œ–¯Ñ-HÈ$RMAJORZ
 CODE_SMELL
 l
-squid:S106:"9Replace this use of System.out or System.err by a logger.(Æ©öÂ8µ’÷±Ñ-HÊRMAJORZ
+squid:S1063"9Replace this use of System.out or System.err by a logger.(ğŸË8ª“şäÓ-HĞ$RMAJORZ
 CODE_SMELL
