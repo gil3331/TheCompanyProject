@@ -1,0 +1,85 @@
+package kr.co.uclick.controller;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import kr.co.uclick.entity.Phone;
+import kr.co.uclick.entity.User;
+import kr.co.uclick.service.PhoneService;
+import kr.co.uclick.service.UserService;
+
+
+@Controller
+public class PhoneController {
+
+	private static final Logger logger = LoggerFactory.getLogger(PhoneController.class);
+
+	@Autowired
+	private PhoneService phoneService; //sampleService를 자동으로 연결해준다.
+	private UserService userService;
+	
+	//GetMapping이란 RequestMapping(method=requestMethod.get)의 바로가기 형태이다.
+	@GetMapping(value = "Phonelist.html")//list.html을 호출하였을 때(list=전체 사용자 리스트를 구현하려는 페이지)
+	public String Phonelist(Model model) {
+		model.addAttribute("phones", phoneService.findAll());//sampleService.findAll()에 users라는 이름을 부여하여 사용한다.
+			return "Phonelist";//list값을 돌려준다.
+	}
+	
+	@GetMapping(value = "PhoneLike.html")//list.html을 호출하였을 때(list=전체 사용자 리스트를 구현하려는 페이지)
+	public String PhoneLike(@RequestParam(value = "number") String number, Model model) {
+		System.out.println(number);
+		model.addAttribute("phone", phoneService.findPhonesByNumberContaining(number));//sampleService.findAll()에 users라는 이름을 부여하여 사용한다.
+		return "PhoneLike";//list값을 돌려준다.
+	}
+	
+	@GetMapping(value = "newPhone.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
+	public String newPhone(@RequestParam (value="user.id") String id, Model model) {
+				model.addAttribute("id",id);
+				return "newPhone";//newForm을 돌려준다.
+	}
+	
+	@GetMapping(value = "Phoneinsert.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
+	public String Phoneinsert(Phone phone, Model model) {
+			phoneService.save(phone);
+			return "Phoneinsert";//newForm을 돌려준다.
+	}
+	
+	
+	@GetMapping(value = "Phoneupdate.html")//save.html을 호출하면 (데이터 insert 페이지)
+	public String save(Long phoneId, Model model) {
+	model.addAttribute("phone",phoneService.findPhonesByPhoneId(phoneId));
+	return "Phoneupdate";
+	}
+	 
+	@PostMapping(value = "PhoneupdateDB.html")//save.html을 호출하면 (데이터 insert 페이지)
+	public String saveDB(Phone phone, Model model) {
+		System.out.println(phone.getphoneId());
+		System.out.println(phone.getNumber());
+		System.out.println(phone.getUser());
+		phoneService.save(phone);
+		return "PhoneupdateDB";
+	}
+	
+	/*
+	 * @GetMapping(value = "Phoneoneview.html")//list.html을 호출하였을 때(list=전체 사용자 리스트를
+	 * 구현하려는 페이지) public String Phoneoneview(Model model) {
+	 * model.addAttribute("phones",
+	 * phoneService.findAllById());//sampleService.findAll()에 users라는 이름을 부여하여 사용한다.
+	 * return "Phoneoneview";//list값을 돌려준다. }
+	 */
+	
+	@GetMapping(value = "Phonedelete.html")//delete.html을 호출하면 (데이터 delete 페이지)
+	public String delete(Long PhoneId, Model model) {
+		phoneService.delete(PhoneId);
+		return "redirect:Phonelist.html";
+	}
+	
+	
+}

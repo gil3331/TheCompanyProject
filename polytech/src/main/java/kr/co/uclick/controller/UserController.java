@@ -1,5 +1,9 @@
 package kr.co.uclick.controller;
 
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.uclick.entity.User;
 import kr.co.uclick.service.UserService;
@@ -25,8 +30,19 @@ public class UserController {
 		return "Userlist";//list값을 돌려준다.
 	}
 	
+	@GetMapping(value = "UserLike.html")//list.html을 호출하였을 때(list=전체 사용자 리스트를 구현하려는 페이지)
+	public String UserLike(@RequestParam(value = "name") String name, Model model) {
+		System.out.println(name);
+		model.addAttribute("user", userService.findUserByNameContaining(name));//sampleService.findAll()에 users라는 이름을 부여하여 사용한다.
+		return "UserLike";//list값을 돌려준다.
+	}
+	
 	@GetMapping(value = "newUser.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
 	public String newUser(Model model) {
+		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
+		Date nowday = new Date();
+		String nowDate = dateformat.format(nowday);
+		model.addAttribute("currentDate", nowDate);
 			return "newUser";//newForm을 돌려준다.
 	}
 	

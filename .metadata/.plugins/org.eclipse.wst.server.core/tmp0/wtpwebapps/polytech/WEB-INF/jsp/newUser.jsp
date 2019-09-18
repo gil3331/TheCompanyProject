@@ -7,23 +7,18 @@
 <title>신규 사용자 작성</title>
 </head>
 <body>
-<script language="javascript">
-function getDate(){
-    var today = new Date();
-
-document.getElementById("currentDate").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
-}
-</script>
 <f:view>
 <h1 align=center>신규 사용자 작성</h1>
 <form action=Userinsert.html>
 <table cellspacing=1 width=600 border=1 align=center>
+	<c:forEach items="${currentDate}" var="date">
 	<tr>
 		<td width=50>ID<input type=text name=ID placeholder="자동부여"></td><tr>
 		<td width=50>이름<input type=text name=name></td><tr>
 		<td width=50>부서<input type=text name=department></td><tr>
-		<td width=50>등록일<input type=date onload="getDate()" id="currentDate" name=registDate></td><tr>
+		<td width=50>등록일<input type=text id="currentDate" name=registDate value="${date}"></td><tr>
 	</tr>
+	</c:forEach>
     </table>
     <input type=submit value=저장>
 </form>

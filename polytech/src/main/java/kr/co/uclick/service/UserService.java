@@ -28,6 +28,11 @@ public class UserService {
 	public List<User> findAll() {//조건에 상관없이 모든것을 조회화는 영역(?)
 		return UserRepository.findAll();
 	}
+	
+	@Transactional(readOnly = true)//트랜잭션 제어를 통해 읽기기능만을 부여함.
+	public List<User> findUserByNameContaining(String name) {//조건에 상관없이 모든것을 조회화는 영역(?)
+		return UserRepository.findUsersByNameContaining(name);
+	}
 
 	@Transactional(readOnly = true)//트랜잭션 제어를 통해 읽기기능만을 부여함.
 	public List<User> findSampleByName(String name) {//이름을 조건으로 조회화는 영역

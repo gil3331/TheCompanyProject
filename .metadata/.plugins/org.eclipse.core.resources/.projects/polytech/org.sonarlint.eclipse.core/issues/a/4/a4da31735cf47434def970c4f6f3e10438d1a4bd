@@ -1,0 +1,12 @@
+
+ˆsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Ù¯¯ıÿÿÿÿ8ªá‰ÄÓ-H—$RMINORZ
+CODE_SMELL
+\squid:S1068"*Remove this unused "logger" private field.(òÌ şÿÿÿÿH•$RMAJORZ
+CODE_SMELL
+d
+squid:S106,"9Replace this use of System.out or System.err by a logger.(ÜşªH˜$RMAJORZ
+CODE_SMELL
+|squid:S00100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ìŒH“$RMINORZ
+CODE_SMELL
+ssquid:S4684$"@Replace this persistent entity with a simple POJO or DTO object.(±ìŒH”$RCRITICALZVULNERABILITY
+ssquid:S4684+"@Replace this persistent entity with a simple POJO or DTO object.(ç’ÏHš$RCRITICALZVULNERABILITY

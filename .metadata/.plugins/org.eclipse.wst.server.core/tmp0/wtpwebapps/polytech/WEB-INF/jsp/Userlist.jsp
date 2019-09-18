@@ -46,8 +46,10 @@
           </c:otherwise>
          </c:choose>
     </table>
-    
-    
+    <form action=UserLike.html style="text-align:center">
+    <input type=text name=name placeholder="이름을 입력하세요">
+    <input type=submit value="조회">
+    </form>
 </body>
 </f:view>
 </body>

@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>신규 사용자 작성</title>
+<script type="text/javascript">
+var dt = new Date();
+var Year = dt.getFullYear();        
+var Month = "" + (dt.getMonth()+1);
+var Day = "" + dt.getDate();            
+
+if(Month.length < 2) Month = "0" + Month;
+if(Day.length < 2) Day = "0" + Day;
+
+var Today = Year.toString() + Month + Day;
+
+document.getElementById("currentDate").value = Today;
+</script>
+</head>
+<body>
+
+<f:view>
+<h1 align=center>신규 사용자 작성</h1>
+<form action=Userinsert.html style="text-align:center">
+<table cellspacing=1 width=600 border=1 align=center>
+	<tr>
+		<td width=50>ID<input type=text name=ID placeholder="자동부여"></td><tr>
+		<td width=50>이름<input type=text name=name></td><tr>
+		<td width=50>부서<input type=text name=department></td><tr>
+		<td width=50>등록일<input type=date id="currentDate" name=registDate value=""></td><tr>
+	</tr>
+    </table>
+    <input type=submit value=저장>
+</form>
+</body>
+</f:view>
+</body>
+</html>

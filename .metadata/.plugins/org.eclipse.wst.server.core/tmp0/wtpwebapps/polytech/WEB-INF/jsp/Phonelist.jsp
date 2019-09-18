@@ -40,7 +40,10 @@
           </c:otherwise>
          </c:choose>
     </table>
-    
+    <form action=PhoneLike.html style="text-align:center">
+    <input type=text name=number placeholder="전화번호를 입력하세요">
+    <input type=submit value="조회">
+    </form>
     </f:view>
 </body>
 </html>

@@ -15,8 +15,8 @@ public interface UserRepository
 		extends JpaRepository<User, Long>, QuerydslPredicateExecutor<User>, CustomUserRepository {
 
 	public List<User> findUserByName(String name);
-			
+			 
 	public List<User> findUsersById(Long id);
 	
-		 
+	public List<User> findUsersByNameContaining(String name);	 
 }
