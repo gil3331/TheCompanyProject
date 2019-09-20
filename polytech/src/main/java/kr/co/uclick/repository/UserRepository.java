@@ -2,10 +2,11 @@ package kr.co.uclick.repository;
 
 import java.util.List;
 
+import javax.persistence.QueryHint;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 
 
@@ -18,5 +19,9 @@ public interface UserRepository
 			 
 	public List<User> findUsersById(Long id);
 	
-	public List<User> findUsersByNameContaining(String name);	 
+	
+	@QueryHints(@QueryHint(name="org.hibernate.cacheable",value="true"))
+	public List<User> findUsersByNameContaining(String name);
+		
+	
 }

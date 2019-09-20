@@ -36,8 +36,8 @@
 				<c:forEach items="${user}" var="u">
 				<tr>
 					<td width=50><p align=center><a href="newPhone.html?user.id=${u.id}">${u.id}</a></p></td>
-           			<td width=50><p align=center>${u.name}</p></td>
            			<td width=50><p align=center>${u.department}</p></td>
+           			<td width=50><p align=center>${u.name}</p></td>
            			<td width=50><p align=center>${u.registDate}</p></td>
            			<td width=50><p align=center><input type=button value=수정 onclick="location.href='Userupdate.html?id=${u.id}'"><input type=button value=삭제 onclick="location.href='Userdelete.html?id=${u.id}'"></p></td>
            		</tr>

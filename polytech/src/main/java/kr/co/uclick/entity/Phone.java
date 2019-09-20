@@ -9,13 +9,21 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.TableGenerator;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Phone")
 public class Phone {
 
 	@Id // 이곳의 프로퍼티가 테이블의 주키임을 나타내는 어노테이션
 	@TableGenerator(name = "Phone") // 키 생성 전용 table을 만들어서 이를 시퀀스처럼 사용하는 어노테이션
 	@GeneratedValue(strategy = GenerationType.TABLE, generator = "Phone") // 주키의 값을 위한 자동 생성 전략을 명시하는데 어노테이션
 	// 테이블 속성은 id, name, number로 구분됨
+	
+	
+	
+	
 	@Column(name = "phoneId")
 	private Long phoneId;
 	@Column(name = "number")
@@ -42,6 +50,7 @@ public class Phone {
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")
+	@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE, region = "Phone.user")
 	private User user;
 	
 	public User getUser() {

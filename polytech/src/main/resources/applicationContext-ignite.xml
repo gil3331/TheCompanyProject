@@ -29,6 +29,19 @@
 		</property>
 		<property name="cacheConfiguration">
 			<list>
+				<bean parent="transactional-cache">
+					<property name="name" value="User" />
+				</bean>
+				<bean parent="transactional-cache">
+					<property name="name" value="Phone" />
+				</bean>
+				<bean parent="transactional-cache">
+					<property name="name" value="User.Phone" />
+				</bean>
+				<bean parent="transactional-cache">
+					<property name="name" value="Phone.user" />
+				</bean>
+
 				<!-- Configuration for update timestamps cache. -->
 				<bean parent="atomic-cache">
 					<property name="name"
@@ -40,15 +53,19 @@
 					<property name="name"
 						value="org.hibernate.cache.internal.StandardQueryCache" />
 				</bean>
+
+
 			</list>
 		</property>
 		<property name="discoverySpi">
-			<bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
+			<bean
+				class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
 				<property name="localPort" value="13011"></property>
 				<property name="ipFinder">
-					<bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder">
+					<bean
+						class="org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder">
 						<property name="addresses">
-						    <value>192.168.23.115:13011</value>
+							<value>192.168.23.115:13011</value>
 						</property>
 					</bean>
 				</property>

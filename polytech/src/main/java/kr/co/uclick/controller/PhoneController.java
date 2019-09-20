@@ -76,8 +76,8 @@ public class PhoneController {
 	 */
 	
 	@GetMapping(value = "Phonedelete.html")//delete.html을 호출하면 (데이터 delete 페이지)
-	public String delete(Long PhoneId, Model model) {
-		phoneService.delete(PhoneId);
+	public String delete(Long phoneId, Model model) {
+		phoneService.delete(phoneId);
 		return "redirect:Phonelist.html";
 	}
 	

@@ -32,7 +32,7 @@
            	 		<td width=50><p align=center><input type=text name=id value="${e.id}" ></p></td>
            			<td width=50><p align=center><input type=text name=name value="${e.name}"></p></td>
            			<td width=50><p align=center><input type=text name=department value="${e.department}"></p></td>
-        			<td width=50><p align=center><input type=text name=registDAte value="${e.registDate}"></p></td>
+        			<td width=50><p align=center><input type=text name=registDate value="${e.registDate}"></p></td>
            		</tr>
            		</c:forEach>
           </c:otherwise>

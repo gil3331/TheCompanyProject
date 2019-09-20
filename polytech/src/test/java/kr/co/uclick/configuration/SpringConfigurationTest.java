@@ -7,21 +7,27 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import kr.co.uclick.entity.Sample;
+import kr.co.uclick.entity.User;
+import kr.co.uclick.entity.Phone;
 import kr.co.uclick.service.SampleService;
+import kr.co.uclick.service.UserService;
+import kr.co.uclick.service.PhoneService;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = SpringConfiguration.class)
 public class SpringConfigurationTest {
 
 	@Autowired
-	SampleService sampleService;
+	UserService userService;
 
 	@Test
 	public void test() {
-		Sample sample = new Sample();
-		sample.setName("park");
-		sample.setNumber(10);
-		sampleService.save(sample);
+		User user = new User();
+		user.setName("park");
+		user.setdepartment("영업부");
+		user.setregistDate("2019-09-20");
+		
+		userService.findAll();
 	}
 
 }

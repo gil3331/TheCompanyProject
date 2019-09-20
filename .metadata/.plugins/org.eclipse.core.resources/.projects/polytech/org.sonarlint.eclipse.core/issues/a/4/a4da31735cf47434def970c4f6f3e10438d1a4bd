@@ -1,12 +1,29 @@
 
-ˆsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Ù¯¯ıÿÿÿÿ8ªá‰ÄÓ-H—$RMINORZ
+l
+squid:S106?"9Replace this use of System.out or System.err by a logger.(üù°«8ÕÓÄğÓ-Hö1RMAJORZ
 CODE_SMELL
-\squid:S1068"*Remove this unused "logger" private field.(òÌ şÿÿÿÿH•$RMAJORZ
+ˆsquid:S00100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™œ±øÿÿÿÿ8ó¢ÕšÔ-Hü1RMINORZ
 CODE_SMELL
-d
-squid:S106,"9Replace this use of System.out or System.err by a logger.(ÜşªH˜$RMAJORZ
+ssquid:S46841"@Replace this persistent entity with a simple POJO or DTO object.(±ìŒHò1RCRITICALZVULNERABILITY
+\squid:S1068"*Remove this unused "logger" private field.(òÌ şÿÿÿÿHù1RMAJORZ
 CODE_SMELL
-|squid:S00100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ìŒH“$RMINORZ
+}squid:UselessImportCheck"=Remove this unused import 'kr.co.uclick.service.UserService'.(ñç”8äúêšÔ-Hñ1RMINORZ
 CODE_SMELL
-ssquid:S4684$"@Replace this persistent entity with a simple POJO or DTO object.(±ìŒH”$RCRITICALZVULNERABILITY
-ssquid:S4684+"@Replace this persistent entity with a simple POJO or DTO object.(ç’ÏHš$RCRITICALZVULNERABILITY
+„squid:CommentedOutCodeLineH"<This block of commented-out lines of code should be removed.(¤¨šùÿÿÿÿ8ĞŠ†íÓ-Hô1RMAJORZ
+CODE_SMELL
+{squid:UselessImportCheck"5Remove this unused import 'kr.co.uclick.entity.User'.(²üàúÿÿÿÿ8‡€Ô-Hú1RMINORZ
+CODE_SMELL
+k
+squid:S106@"9Replace this use of System.out or System.err by a logger.(Üşª8 ³ÅğÓ-Hø1RMAJORZ
+CODE_SMELL
+ssquid:S4684>"@Replace this persistent entity with a simple POJO or DTO object.(ç’ÏHó1RCRITICALZVULNERABILITY
+q
+squid:S106A"9Replace this use of System.out or System.err by a logger.(ë×’ñüÿÿÿÿ8ó¢ÕšÔ-Hş1RMAJORZ
+CODE_SMELL
+j
+squid:S106%"9Replace this use of System.out or System.err by a logger.(·ùßóıÿÿÿÿHı1RMAJORZ
+CODE_SMELL
+|squid:S001001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ìŒHû1RMINORZ
+CODE_SMELL
+ˆsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Ù¯¯ıÿÿÿÿ8ªá‰ÄÓ-Hõ1RMINORZ
+CODE_SMELL

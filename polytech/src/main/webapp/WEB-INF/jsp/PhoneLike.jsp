@@ -11,7 +11,7 @@
 <button type="button" name=사용자리스트 onclick="location.href='Userlist.html'">사용자 리스트</button><button type="button" name=전화번호리스트 onclick="location.href='Phonelist.html'">전화번호 리스트</button>
 <h1 align=center>전화번호 조회결과</h1>
 
-<table cellspacing=1 width=600 border=1 align=center>
+<table cellspacing=1 width=800 border=1 align=center>
 	<tr>
 		<td width=50><p align=center>전화ID</p></td>
 		<td width=50><p align=center>전화번호</p></td>
