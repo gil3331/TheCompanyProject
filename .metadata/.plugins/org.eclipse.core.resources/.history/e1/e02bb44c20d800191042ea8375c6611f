@@ -1,9 +1,0 @@
-package kr.co.uclick.repository;
-
-
-
-public interface CustomPhoneRepository {
-
-	public void doUser(String name);
-				
-}

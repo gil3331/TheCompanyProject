@@ -5,10 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전화번호 리스트</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 <body>
 <f:view>
-<button type="button" name=사용자리스트 onclick="location.href='Userlist.html'">사용자 리스트</button><button type="button" name=전화번호리스트 onclick="location.href='Phonelist.html'">전화번호 리스트</button>
+<button class="btn btn-secondary btn-lg" type="button" name=사용자리스트 onclick="location.href='Userlist.html'">사용자 리스트</button><button class="btn btn-info btn-lg" type="button" name=전화번호리스트 onclick="location.href='Phonelist.html'">전화번호 리스트</button>
 <h1 align=center>전화번호 리스트</h1>
 
 <table cellspacing=1 width=800 border=1 align=center>
@@ -33,7 +34,7 @@
 					<td width=50><p align=center>${p.phoneId}</p></td>
 					<td width=50><p align=center>${p.number}</p></td>
 					<td width=50><p align=center>${p.user.id}</p></td>
-           			<td width=50><p align=center><input type=button value=수정 onclick="location.href='Phoneupdate.html?phoneId=${p.phoneId}'"><input type=button value=삭제 onclick="location.href='Phonedelete.html?phoneId=${p.phoneId}'"></p></td>
+           			<td width=50><p align=center><input class="btn btn-outline-warning" type=button value=수정 onclick="location.href='Phoneupdate.html?phoneId=${p.phoneId}'"><input class="btn btn-outline-danger" type=button value=삭제 onclick="location.href='Phonedelete.html?phoneId=${p.phoneId}'"></p></td>
            		</tr>
            		</c:forEach>
            		</form>
@@ -42,7 +43,7 @@
     </table>
     <form action=PhoneLike.html style="text-align:center">
     <input type=text name=number placeholder="전화번호를 입력하세요">
-    <input type=submit value="조회">
+    <input class="btn btn-primary" type=submit value="조회">
     </form>
     </f:view>
 </body>

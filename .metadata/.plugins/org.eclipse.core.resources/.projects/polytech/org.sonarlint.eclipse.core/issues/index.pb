@@ -47,8 +47,6 @@ W
 'src/main/webapp/WEB-INF/jsp/newUser.jsp,6\7\6778a88bfbb5c98cfe21c702fbf3369170825027
 Z
 *src/main/webapp/WEB-INF/jsp/Userinsert.jsp,1\5\1566d7183a06220506c03bfe84981d74c7c69e4e
-[
-+src/main/webapp/WEB-INF/jsp/Useroneview.jsp,3\4\3461e57468a7b9f9f1666bb5bfc25b7fe6d7b11a
 Z
 *src/main/webapp/WEB-INF/jsp/Userdelete.jsp,d\8\d8f241ef0271cdb10d9b4dee5e59287703dfbdbe
 Z
@@ -71,8 +69,6 @@ j
 :src/main/java/kr/co/uclick/controller/PhoneController.java,a\4\a4da31735cf47434def970c4f6f3e10438d1a4bd
 j
 :src/main/java/kr/co/uclick/repository/PhoneRepository.java,e\5\e568099b30f0c45b495350f612009e9c8d1ffda7
-\
-,src/main/webapp/WEB-INF/jsp/Phoneoneview.jsp,3\5\353e5e780b68330329dc8e18950c43ec07091a65
 [
 +src/main/webapp/WEB-INF/jsp/Phonedelete.jsp,1\c\1cce4516783cc174b0bdbc05600b0b2fa00fcfee
 [
@@ -87,3 +83,5 @@ X
 (src/main/webapp/WEB-INF/jsp/UserLike.jsp,2\4\24ca5ec72e34440c4674be61e7d083963d8d03be
 Y
 )src/main/webapp/WEB-INF/jsp/PhoneLike.jsp,4\a\4a134247b4b4e0db345c3c0f81e7082d9802185c
+T
+$src/main/webapp/WEB-INF/jsp/home.jsp,5\9\59666227893021ff0f8b6fbb8c015ef116e9498f

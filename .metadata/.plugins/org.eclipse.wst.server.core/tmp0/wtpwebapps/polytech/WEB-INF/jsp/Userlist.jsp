@@ -5,17 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>사용자 리스트</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 <body>
 <f:view>
-<button type="button" name=사용자리스트 onclick="location.href='Userlist.html'">사용자 리스트</button><button type="button" name=전화번호리스트 onclick="location.href='Phonelist.html'">전화번호 리스트</button>
+<button class="btn btn-secondary btn-lg" type="button" name=사용자리스트 onclick="location.href='Userlist.html'">사용자 리스트</button><button class="btn btn-info btn-lg" type="button" name=전화번호리스트 onclick="location.href='Phonelist.html'">전화번호 리스트</button>
 <h1 align=center>사용자 리스트</h1>
 
 
 <form action=newUser.html style="text-align:center">
-<input type=submit value="사용자 추가">
+<input class="btn btn-outline-success" type=submit value="사용자 추가">
 </form>
-<table cellspacing=1 width=600 border=1 align=center>
+<table cellspacing=1 width=800 border=1 align=center>
 	<tr>
 		<td width=50><p align=center>ID</p></td>
 		<td width=50><p align=center>이름</p></td>
@@ -39,7 +40,7 @@
            			<td width=50><p align=center>${e.name}</p></td>
            			<td width=50><p align=center>${e.department}</p></td>
            			<td width=50><p align=center>${e.registDate}</p></td>
-           			<td width=50><p align=center><input type=button value=수정 onclick="location.href='Userupdate.html?id=${e.id}'"><input type=button value=삭제 onclick="location.href='Userdelete.html?id=${e.id}'"></p></td>
+           			<td width=50><p align=center><input class="btn btn-outline-warning" type=button value=수정 onclick="location.href='Userupdate.html?id=${e.id}'"><input class="btn btn-outline-danger" type=button value=삭제 onclick="location.href='Userdelete.html?id=${e.id}'"></p></td>
            		</tr>
            		</c:forEach>
            		</form>
@@ -48,7 +49,7 @@
     </table>
     <form action=UserLike.html style="text-align:center">
     <input type=text name=name placeholder="이름을 입력하세요">
-    <input type=submit value="조회">
+    <input class="btn btn-primary" type=submit value="조회">
     </form>
 </body>
 </f:view>

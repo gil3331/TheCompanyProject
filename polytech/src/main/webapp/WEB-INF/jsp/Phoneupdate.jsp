@@ -5,11 +5,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전화번호 리스트</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script>
+function inputPhoneNumber(obj) {
+	
+    var number = obj.value.replace(/[^0-9]/g, "");
+    var phone = "";
+
+	if(number.length < 4) {
+        return number;
+    } else if(number.length < 7) {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3);
+    } else if(number.length < 11) {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3, 3);
+        phone += "-";
+        phone += number.substr(6);
+    } else {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3, 4);
+        phone += "-";
+        phone += number.substr(7);
+    }
+    obj.value = phone;
+}
+</script>
 </head>
 <body>
 <f:view>
 <h1 align=center>전화번호 리스트</h1>
-<form method="post" action=PhoneupdateDB.html>
+<form name="form" method="post" action=PhoneupdateDB.html>
 <table cellspacing=1 width=600 border=1 align=center>
 	<tr>
 		<td width=50><p align=center>전화ID</p></td>
@@ -29,7 +58,7 @@
 				<c:forEach items="${phone}" var="p">
 				<tr>
            	 		<td width=50><p align=center><input type=text name=PhoneId value="${p.phoneId}" ></p></td>
-           			<td width=50><p align=center><input type=text name=number value="${p.number}"></p></td>
+           			<td width=50><p align=center><input type=text name=number value="${p.number}" onKeyup="inputPhoneNumber(this);" maxlength="13"></p></td>
            			<td width=50><p align=center><input type=text name=user.id value="${p.user.id}"></p></td>
         
            		</tr>
@@ -37,9 +66,8 @@
           </c:otherwise>
          </c:choose>
     </table>
-    
-    
-    <input type=submit value="전화번호 수정">
+    <input class="btn btn-primary" type=submit value="전화번호 수정">
+    <input class="btn btn-danger" type="button" value="취소" onclick="location.href='javascript:history.back()'">
     </form>
 </body>
 </f:view>

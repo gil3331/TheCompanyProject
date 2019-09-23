@@ -1,9 +1,9 @@
 
-“squid:S00116"YRename this field "UserRepository" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¾Õüüÿÿÿÿ8¹ùıĞ-H².RMINORZ
+{squid:UselessImportCheck":Remove this unused import 'javax.lang.model.element.Name'.(°¦£Â8†ãŒÑ-H¿2RMINORZ
 CODE_SMELL
-{squid:UselessImportCheck":Remove this unused import 'javax.lang.model.element.Name'.(°¦£Â8†ãŒÑ-H±.RMINORZ
+squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´ò¬¬8ª„şĞ-HÀ2RMAJORZ
 CODE_SMELL
-squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´ò¬¬8ª„şĞ-H´.RMAJORZ
+usquid:UselessImportCheck"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8’Ë¦Ñ-HÁ2RMINORZ
 CODE_SMELL
-usquid:UselessImportCheck"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8’Ë¦Ñ-H³.RMINORZ
+“squid:S00116"YRename this field "UserRepository" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¾Õüüÿÿÿÿ8¹ùıĞ-HÂ2RMINORZ
 CODE_SMELL

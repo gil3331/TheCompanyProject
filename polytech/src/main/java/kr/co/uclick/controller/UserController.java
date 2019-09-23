@@ -27,39 +27,39 @@ public class UserController {
 	@GetMapping(value = "Userlist.html")//list.html을 호출하였을 때(list=전체 사용자 리스트를 구현하려는 페이지)
 	public String Userlist(Model model) {
 		model.addAttribute("users", userService.findAll());//sampleService.findAll()에 users라는 이름을 부여하여 사용한다.
-		return "Userlist";//list값을 돌려준다.
+		return "Userlist";//list를 돌려준다.
 	}
 	
-	@GetMapping(value = "UserLike.html")//list.html을 호출하였을 때(list=전체 사용자 리스트를 구현하려는 페이지)
+	@GetMapping(value = "UserLike.html")//UserLike.html을 호출하였을 때(DB like를 이용한 조건부 조회를 위한 페이지)
 	public String UserLike(@RequestParam(value = "name") String name, Model model) {
 		System.out.println(name);
-		model.addAttribute("user", userService.findUserByNameContaining(name));//sampleService.findAll()에 users라는 이름을 부여하여 사용한다.
-		return "UserLike";//list값을 돌려준다.
+		model.addAttribute("user", userService.findUserByNameContaining(name));//
+		return "UserLike";//Userlike를 돌려준다.
 	}
 	
-	@GetMapping(value = "newUser.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
+	@GetMapping(value = "newUser.html")//newUser.html을 호출하면(신규 유저 작성을 위한 form 페이지)
 	public String newUser(Model model) {
 		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
 		Date nowday = new Date();
 		String nowDate = dateformat.format(nowday);
 		model.addAttribute("currentDate", nowDate);
-			return "newUser";//newForm을 돌려준다.
+			return "newUser";//newUser을 돌려준다.
 	}
 	
-	@GetMapping(value = "Userinsert.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
+	@GetMapping(value = "Userinsert.html")//Userinsert.html을 호출하면(newUser에서 받은 데이터 값을 DB에 insert하는 페이지)
 	public String Userinsert(User user,Model model) {
 			userService.save(user);
-			return "Userinsert";//newForm을 돌려준다.
+			return "Userinsert";//Userinsert을 돌려준다.
 	}
 
 	
-	@GetMapping(value = "Userupdate.html")//save.html을 호출하면 (데이터 insert 페이지)
+	@GetMapping(value = "Userupdate.html")//Userupdate.html을 호출하면 (유저 수정을 위한 form 페이지)
 	public String save(Long id, Model model) {
 		model.addAttribute("user",userService.findUsersById(id));
 		return "Userupdate";
 	}
 	
-	@PostMapping(value = "UserupdateDB.html")//save.html을 호출하면 (데이터 insert 페이지)
+	@PostMapping(value = "UserupdateDB.html")//UserupdateDB.html을 호출하면 (수정된 데이터 값을 DB에 저장하는 페이지)
 	public String saveDB(User user, Model model) {
 		System.out.println(user.getId());
 		System.out.println(user.getName());

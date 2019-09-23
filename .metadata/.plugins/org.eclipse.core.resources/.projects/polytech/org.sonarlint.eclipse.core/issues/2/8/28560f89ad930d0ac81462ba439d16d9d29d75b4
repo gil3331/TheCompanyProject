@@ -1,26 +1,26 @@
 
-l
-squid:S106@"9Replace this use of System.out or System.err by a logger.(—ÊÇ½8ª“şäÓ-H¢.RMAJORZ
+zsquid:S46842"@Replace this persistent entity with a simple POJO or DTO object.(Ïàò—8”¶—Ñ-HÅ2RCRITICALZVULNERABILITY
+q
+squid:S106A"9Replace this use of System.out or System.err by a logger.(„£õòùÿÿÿÿ8µ’÷±Ñ-HÌ2RMAJORZ
 CODE_SMELL
 l
-squid:S106#"9Replace this use of System.out or System.err by a logger.(«‹Îõ8µ’÷±Ñ-H¦.RMAJORZ
+squid:S106C"9Replace this use of System.out or System.err by a logger.(ğŸË8üçŠšÔ-HË2RMAJORZ
+CODE_SMELL
+ƒsquid:S001002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïàò—8×½×›Ñ-HÆ2RMINORZ
+CODE_SMELL
+squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦šÀøÿÿÿÿHÄ2RMINORZ
+CODE_SMELL
+csquid:S1068"*Remove this unused "logger" private field.(—­Š›ùÿÿÿÿ8œ–¯Ñ-HÊ2RMAJORZ
+CODE_SMELL
+ˆsquid:S00100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÌ¨Ìÿÿÿÿÿ8ûá–Ô-HÇ2RMINORZ
 CODE_SMELL
 l
-squid:S106C"9Replace this use of System.out or System.err by a logger.(ğŸË8üçŠšÔ-H£.RMAJORZ
+squid:S106@"9Replace this use of System.out or System.err by a logger.(—ÊÇ½8ª“şäÓ-HÍ2RMAJORZ
+CODE_SMELL
+l
+squid:S106#"9Replace this use of System.out or System.err by a logger.(«‹Îõ8µ’÷±Ñ-HÃ2RMAJORZ
 CODE_SMELL
 q
-squid:S106B"9Replace this use of System.out or System.err by a logger.(Ï°‡Øùÿÿÿÿ8µ’÷±Ñ-H¥.RMAJORZ
+squid:S106B"9Replace this use of System.out or System.err by a logger.(Ï°‡Øùÿÿÿÿ8µ’÷±Ñ-HÉ2RMAJORZ
 CODE_SMELL
-ˆsquid:S00100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÌ¨Ìÿÿÿÿÿ8ûá–Ô-H¡.RMINORZ
-CODE_SMELL
-squid:S4684?"@Replace this persistent entity with a simple POJO or DTO object.(ÊõÓæûÿÿÿÿ8Ê«úöÑ-Hª.RCRITICALZVULNERABILITY
-q
-squid:S106A"9Replace this use of System.out or System.err by a logger.(„£õòùÿÿÿÿ8µ’÷±Ñ-H .RMAJORZ
-CODE_SMELL
-ƒsquid:S001002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïàò—8×½×›Ñ-H©.RMINORZ
-CODE_SMELL
-squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦šÀøÿÿÿÿH§.RMINORZ
-CODE_SMELL
-zsquid:S46842"@Replace this persistent entity with a simple POJO or DTO object.(Ïàò—8”¶—Ñ-H¨.RCRITICALZVULNERABILITY
-csquid:S1068"*Remove this unused "logger" private field.(—­Š›ùÿÿÿÿ8œ–¯Ñ-H¤.RMAJORZ
-CODE_SMELL
+squid:S4684?"@Replace this persistent entity with a simple POJO or DTO object.(ÊõÓæûÿÿÿÿ8Ê«úöÑ-HÈ2RCRITICALZVULNERABILITY

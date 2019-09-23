@@ -1,5 +1,5 @@
 
-ˆsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ºêýùÿÿÿÿ8ê·ÌúÐ-H¥RMINORZ
+ssquid:S4684)"@Replace this persistent entity with a simple POJO or DTO object.(Ò†“öHý4RCRITICALZVULNERABILITY
+xsquid:S46843"@Replace this persistent entity with a simple POJO or DTO object.(éØàðýÿÿÿÿHþ4RCRITICALZVULNERABILITY
+ˆsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ºêýùÿÿÿÿ8ê·ÌúÐ-Hÿ4RMINORZ
 CODE_SMELL
-ssquid:S4684)"@Replace this persistent entity with a simple POJO or DTO object.(Ò†“öH¦RCRITICALZVULNERABILITY
-xsquid:S46843"@Replace this persistent entity with a simple POJO or DTO object.(éØàðýÿÿÿÿH§RCRITICALZVULNERABILITY

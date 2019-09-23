@@ -32,33 +32,33 @@ public class PhoneController {
 			return "Phonelist";//list값을 돌려준다.
 	}
 	
-	@GetMapping(value = "PhoneLike.html")//list.html을 호출하였을 때(list=전체 사용자 리스트를 구현하려는 페이지)
+	@GetMapping(value = "PhoneLike.html")//PhoneLike.html을 호출하였을 때(특정 조건으로 데이터를 조회하는 페이지)
 	public String PhoneLike(@RequestParam(value = "number") String number, Model model) {
 		System.out.println(number);
-		model.addAttribute("phone", phoneService.findPhonesByNumberContaining(number));//sampleService.findAll()에 users라는 이름을 부여하여 사용한다.
+		model.addAttribute("phone", phoneService.findPhonesByNumberContaining(number));//number변수 값을 기준으로 데이터를 조회하는 메서드
 		return "PhoneLike";//list값을 돌려준다.
 	}
 	
-	@GetMapping(value = "newPhone.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
+	@GetMapping(value = "newPhone.html")//newPhone.html을 호출하면(user.id로 들어온 내용에 대해 신규 Phone을 작성하는 form)
 	public String newPhone(@RequestParam (value="user.id") String id, Model model) {
 				model.addAttribute("id",id);
-				return "newPhone";//newForm을 돌려준다.
+				return "newPhone";//newPhone을 돌려준다.
 	}
 	
-	@GetMapping(value = "Phoneinsert.html")//newForm.html을 호출하면(아마도 create 테이블용 페이지)
+	@GetMapping(value = "Phoneinsert.html")//Phoneinsert.html을 호출하면(newPhone에서 작성된 값을 받아 DB에 저장하는 페이지)
 	public String Phoneinsert(Phone phone, Model model) {
 			phoneService.save(phone);
-			return "Phoneinsert";//newForm을 돌려준다.
+			return "Phoneinsert";//Phoneinsert을 돌려준다.
 	}
 	
 	
-	@GetMapping(value = "Phoneupdate.html")//save.html을 호출하면 (데이터 insert 페이지)
+	@GetMapping(value = "Phoneupdate.html")//Phoneupdate.html을 호출하면 (수정 form을 구현하는 페이지)
 	public String save(Long phoneId, Model model) {
 	model.addAttribute("phone",phoneService.findPhonesByPhoneId(phoneId));
 	return "Phoneupdate";
 	}
 	 
-	@PostMapping(value = "PhoneupdateDB.html")//save.html을 호출하면 (데이터 insert 페이지)
+	@PostMapping(value = "PhoneupdateDB.html")//PhoneupdateDB.html을 호출하면 (Phoneupdate에서 받은 값을 DB에 저장하는 페이지)
 	public String saveDB(Phone phone, Model model) {
 		System.out.println(phone.getphoneId());
 		System.out.println(phone.getNumber());
@@ -67,14 +67,7 @@ public class PhoneController {
 		return "PhoneupdateDB";
 	}
 	
-	/*
-	 * @GetMapping(value = "Phoneoneview.html")//list.html을 호출하였을 때(list=전체 사용자 리스트를
-	 * 구현하려는 페이지) public String Phoneoneview(Model model) {
-	 * model.addAttribute("phones",
-	 * phoneService.findAllById());//sampleService.findAll()에 users라는 이름을 부여하여 사용한다.
-	 * return "Phoneoneview";//list값을 돌려준다. }
-	 */
-	
+		
 	@GetMapping(value = "Phonedelete.html")//delete.html을 호출하면 (데이터 delete 페이지)
 	public String delete(Long phoneId, Model model) {
 		phoneService.delete(phoneId);

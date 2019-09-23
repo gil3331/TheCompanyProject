@@ -58,4 +58,10 @@ public class SampleController {
 		model.addAttribute("findSampleByName", sampleService.findSampleByName(name));//sampleservice에서 name이란 이름이 들어간 부분을 찾아서 findsamplebyname이란 이름을 부여하여 사용한다.
 		return "sample";//sample을 돌려준다.
 	}
+	
+	@GetMapping(value = "home.html")//save.html을 호출하면 (데이터 insert 페이지)
+	public String home(Model model) {
+		return "home";
+	}
+	
 }

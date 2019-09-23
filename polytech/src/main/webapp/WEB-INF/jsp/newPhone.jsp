@@ -5,22 +5,53 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>신규 전화번호 작성</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script>
+function inputPhoneNumber(obj) {
+
+	var number = obj.value.replace(/[^0-9]/g, "");
+    var phone = "";
+
+	if(number.length < 4) {
+        return number;
+    } else if(number.length < 7) {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3);
+    } else if(number.length < 11) {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3, 3);
+        phone += "-";
+        phone += number.substr(6);
+    } else {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3, 4);
+        phone += "-";
+        phone += number.substr(7);
+    }
+    obj.value = phone;
+}
+
+</script>
 </head>
 <body>
 
 <f:view>
 <h1 align=center>신규 전화번호 작성</h1>
-<form action=Phoneinsert.html>
+<form name="form" action=Phoneinsert.html>
 <table cellspacing=1 width=600 border=1 align=center>
 	<c:forEach items="${id}" var="id">
 	<tr>
 		<td width=50>전화ID<input type=text name=PhoneId placeholder="자동부여"></td><tr>
-		<td width=50>전화번호<input type=text name=number></td><tr>
+		<td width=50>전화번호<input type=text name=number onKeyup="inputPhoneNumber(this);" maxlength="13" placeholder="000-0000-0000으로 적어주세요"></td><tr>
 		<td width=50>사용자ID<input type=text name=user.id value="${id}"></td><tr>
 	</tr>
 	</c:forEach>
     </table>
-    <input type=submit value=저장>
+    <input class="btn btn-primary" type=submit value=저장>
+    <input class="btn btn-danger" type="button" value="취소" onclick="location.href='javascript:history.back()'">
 </form>
 </body>
 </f:view>
